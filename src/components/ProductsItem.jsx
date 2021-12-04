@@ -94,8 +94,8 @@ export const ProductsItem = () => {
                 <>
                   <label className='form-label'>Size</label>
                   <select onChange={(e) => setChooseSize(e.target.value)} className="form-select">
-                    <option selected>Open this select size</option>
-                    {size.map(s => <option value={s.charge}>{s.format}</option>)}
+                    <option defaultValue>Open this select size</option>
+                    {size.map(s => <option value={s.charge} key={s.format}>{s.format}</option>)}
                   </select>
                 </>
               )
