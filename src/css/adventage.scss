@@ -1,0 +1,125 @@
+.adventage {
+  height: 250px;
+  box-sizing: border-box;
+  padding: 20px 30px;
+  margin-top: 40px;
+
+  .row {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .adventage-wrapper {
+      .adventage-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        width: 100%;
+
+        svg {
+          height: 45px;
+          width: 45px;
+          margin-bottom: 15px;
+
+          path {
+            fill: rgb(236, 236, 38);
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (min-width:0) and (max-width:446.9px) {
+  .adventage {
+    height: auto;
+    padding: 20px 30px;
+    margin-top: 30px;
+
+    .row {
+      border: none;
+
+      .adventage-wrapper {
+        height: 180px;
+        padding: 0;
+
+        .adventage-item {
+          padding: 10px 0;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-bottom: 30px;
+          justify-content: center;
+          align-items: center;
+
+          svg {
+            height: 65px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:447px) and (max-width:989.9px) {
+  .adventage {
+    height: auto;
+    padding: 20px 10px;
+    margin-top: 30px;
+
+    .row {
+      border: none;
+
+      .adventage-wrapper {
+        height: 180px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+
+        .adventage-item {
+          padding: 10px 0;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-bottom: 20px;
+          align-items: center;
+          width: 90%;
+
+          svg {
+            height: 65px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:990px) and (max-width:1199.9px) {
+  .adventage {
+    height: auto;
+    padding: 20px;
+    margin-top: 30px;
+
+    .row {
+      .adventage-wrapper {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        padding: 10px;
+
+        .adventage-item {
+          padding: 10px 0;
+
+          svg {
+            height: 50px;
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+
+
+}

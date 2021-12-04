@@ -1,0 +1,67 @@
+.products {
+  margin-top: 20px;
+
+  .products-top {
+    box-sizing: border-box;
+    padding: 0 20px;
+
+    .products-top-inside {
+      height: 100%;
+      padding: 10px 0;
+      border-bottom: 1px solid rgb(167, 164, 164);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .products-content {
+    .react-slick-products {
+      height: auto;
+      margin-top: 10px;
+
+      .products-item-block {
+        box-sizing: border-box;
+        padding: 20px;
+        width: 100%;
+
+        .products-item {
+          cursor: pointer;
+          width: 100%;
+          box-sizing: border-box;
+          padding-right: 10px;
+
+          a {
+            .card {
+              height: 400px;
+
+              .card-top {
+                overflow: hidden;
+                height: 75%;
+
+                img {
+                  height: 100%;
+                  width: 100%;
+                }
+
+                .view-product {
+                  background-color: #fff;
+                  padding: 8px;
+                  text-align: center;
+                  transform: translateY(0px);
+                  transition: all 0.2s linear;
+                }
+              }
+            }
+
+            &:hover .card-top .view-product {
+              transform: translateY(-48px);
+              transition: all 0.2s linear;
+            }
+          }
+        }
+      }
+    }
+  }
+}

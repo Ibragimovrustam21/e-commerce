@@ -1,0 +1,24 @@
+.react-slick-carousel {
+  height: 100vh;
+  width: 100%;
+
+  .react-slick-carousel-item {
+    height: 100vh;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width:0) and (max-width:1199.9px) {
+  .react-slick-carousel {
+    height: auto;
+
+    .react-slick-carousel-item {
+      height: auto;
+    }
+  }
+}
+

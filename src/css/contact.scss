@@ -1,0 +1,82 @@
+.contact {
+  height: auto;
+
+  .row {
+    background: url('https://www.smecorner.com/wp-content/uploads/contact-header-mobile.png') no-repeat center;
+    background-size: 100%;
+
+    .contact-right {
+      box-sizing: border-box;
+
+      img {
+        display: none;
+      }
+    }
+
+    .contact-left {
+      box-sizing: border-box;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+}
+
+@media (min-width:0) and (max-width:446.9px) {
+  .contact {
+    height: auto;
+
+    .row {
+      flex-direction: column-reverse;
+      background: none;
+
+      .contact-right {
+        img {
+          height: auto;
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .contact-left {
+        padding: 20px 30px;
+      }
+    }
+  }
+}
+
+@media (min-width:447px) and (max-width:768.9px) {
+  .contact {
+    height: auto;
+
+    .row {
+      flex-direction: column-reverse;
+      background: none;
+      .contact-right {
+        img {
+          height: auto;
+          display: block;
+          width: 100%;
+        }
+      }
+
+      .contact-left {
+        padding: 20px 30px;
+      }
+    }
+  }
+}
+
+@media (min-width:769px) and (max-width:1199.9px) {
+  .contact {
+    height: auto;
+
+    .row {
+      .contact-left {
+        padding: 20px 30px;
+      }
+    }
+  }
+}

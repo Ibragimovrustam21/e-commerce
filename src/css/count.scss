@@ -1,0 +1,23 @@
+
+.btn-group {
+  display: flex;
+  width: 50%;
+  border: 2px solid rgb(126, 123, 123);
+  border-radius: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-group .button {
+  padding: 2px 10px;
+  border: 0;
+  background: none;
+}
+
+.btn-left {
+  border-radius: 20px 0 0 20px;
+}
+
+.btn-right {
+  border-radius: 0 20px 20px 0;
+}
