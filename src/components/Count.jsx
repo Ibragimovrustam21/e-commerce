@@ -30,7 +30,7 @@ export const Count = ({ id, counter, cost, actionName, chooseSize }) => {
       default:
         return
     }
-  }, [count,dispatch,data.cardItem])
+  }, [count, dispatch, data.cardItem, chooseSize, id, actionName])
 
   const zb_remove = () => {
     setCount(count - 1)
