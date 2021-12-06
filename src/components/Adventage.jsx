@@ -50,10 +50,6 @@ export const Adventage = () => (
         </div>
       </div>
     </div>
-
-
-
-
   </div>
 )
 

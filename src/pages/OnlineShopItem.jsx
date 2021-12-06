@@ -41,7 +41,7 @@ export const OnlineShopItem = () => {
             <p className='mt-3'>Subtitle</p>
           </div>
           <div className='osh-item-contact'>
-            <h5>Contact</h5>
+            <h5>Связоваться с нами</h5>
             <p className='mt-3'>Location: 123</p>
             <p>Phone: +998934342110</p>
             <p>Email: Delphin@mail.com</p>
