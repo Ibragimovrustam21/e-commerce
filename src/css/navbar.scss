@@ -1,10 +1,21 @@
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 1s linear;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+  box-shadow:  rgba(2, 12, 27, 0.7);
+}
 .navbar {
   background: transparent;
   box-sizing: border-box;
   padding: 10px;
 
   .navbar-brand-block {
-    width: 50%;
+    width: auto;
     display: flex;
 
     .navbar-brand {
@@ -256,7 +267,7 @@
     padding: 10px;
 
     .navbar-brand-block {
-      width: auto;
+      width: 30%;
 
       .search-block {
         width: 60%;

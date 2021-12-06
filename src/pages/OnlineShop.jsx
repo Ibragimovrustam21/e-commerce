@@ -23,8 +23,8 @@ export const OnlineShop = () => {
         <div className='col-12'>
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb m-0">
-              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-              <li className="breadcrumb-item active" aria-current="page">Online Shop</li>
+              <li className="breadcrumb-item"><Link to="/">Главный</Link></li>
+              <li className="breadcrumb-item active" aria-current="page">Онлайн заявления</li>
             </ol>
           </nav>
         </div>
@@ -32,19 +32,19 @@ export const OnlineShop = () => {
       <div className="row online-shop-content">
         <div className="col">
           <div className='osh-navigation'>
-            <span className={ServicesActive} onClick={() => setActive(true)}>Our Services</span>
-            <span className={DesignActive} onClick={() => setActive(false)}>Design</span>
+            <span className={ServicesActive} onClick={() => setActive(true)}>Наши сервисы</span>
+            <span className={DesignActive} onClick={() => setActive(false)}>Дизайн</span>
           </div>
           <div className='osh-card-group'>
             {data.onlineShop.map(r => {
               return (
-                <Link to={r.id}>
+                <Link to={r.id} key={r.id}>
                   <div className='card'>
                     <img src={r.img} className="d-block" alt="..." />
                     <div className='card-body'>
                       <h5 className="card-title">{r.name}</h5>
-                      <p className="card-text">{r.cost} so`m</p>
-                      <button className='btn btn-danger'>Registered</button>
+                      <p className="card-text">{r.cost}сум</p>
+                      <button className='btn btn-danger'>Регистрация</button>
                     </div>
                   </div>
                 </Link>

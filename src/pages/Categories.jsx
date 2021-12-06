@@ -11,8 +11,8 @@ export const Categories = () => {
         <div className='col-12 categories-top-col'>
           <nav aria-label="breadcrumb">
             <ol className="breadcrumb m-0">
-              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-              <li className="breadcrumb-item active" aria-current="page">Products</li>
+              <li className="breadcrumb-item"><Link to="/">Главный</Link></li>
+              <li className="breadcrumb-item active" aria-current="page">Продукты</li>
             </ol>
           </nav>
         </div>
@@ -31,7 +31,7 @@ export const Categories = () => {
                   </div>
                   <div className='card-body'>
                     <h5 className="card-title">{r.name}</h5>
-                    <p className="card-text">{r.cost} so`m</p>
+                    <p className="card-text">{r.cost}сум</p>
                   </div>
                 </div>
               </Link>

@@ -1,46 +1,27 @@
 import React, { useState, useEffect } from 'react'
-import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import '../css/count.scss'
-import { addCount, removeCount, flaer, paket, buklet, blackBokal, whiteBokal, ruchka, vizitka } from '../store/ProductSlice'
+import { addCount, removeCount } from '../store/ProductSlice'
 
-export const Count = ({ id, counter, cost, actionName, chooseSize }) => {
-  const [count, setCount] = useState(counter)
-  const [disable, setDisable] = useState('')
+export const Count = ({ id, counter, switchCharge }) => {
   const dispatch = useDispatch()
-  const data = useSelector(state => state.rec)
+  const [count, setCount] = useState('')
+  const [disable, setDisable] = useState('')
 
   useEffect(() => {
-    if (count === 1) setDisable(true);
-    switch (actionName) {
-      case 'paket':
-        return dispatch(paket({ id, count }))
-      case 'whiteBokal':
-        return dispatch(whiteBokal({ id, count }))
-      case 'blacBokal':
-        return dispatch(blackBokal({ id, count }))
-      case 'ruchka':
-        return dispatch(ruchka({ id, count }))
-      case 'flaer':
-        return dispatch(flaer({ id, count }))
-      case 'buklet':
-        return dispatch(buklet({ id, count }))
-      case 'vizitka':
-        return dispatch(vizitka({ id, count, chooseSize }))
-      default:
-        return
-    }
-  }, [count, dispatch, data.cardItem, chooseSize, id, actionName])
+    if (counter === 1) setDisable(true)
+    setCount(counter)
+  }, [counter])
 
   const zb_remove = () => {
-    setCount(count - 1)
-    dispatch(removeCount({ id, count, cost }))
+    dispatch(removeCount({ id }))
+    switchCharge()
   }
 
   const zb_add = () => {
+    dispatch(addCount({ id }))
+    switchCharge()
     setDisable(false)
-    setCount(count + 1)
-    dispatch(addCount({ id, count, cost }))
   }
 
   return (

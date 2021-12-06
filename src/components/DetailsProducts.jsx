@@ -16,21 +16,21 @@ export const DetailsProducts = () => {
         <h3>Детали заказа</h3>
       </div>
       <div className='basket-charge'>
-        <h5>Summa</h5>
-        <h6>{data.total} so`m</h6>
+        <h5>Сумма</h5>
+        <h6>{data.total} сум</h6>
       </div>
       <div className='basket-charge'>
-        <h5>Delivery</h5>
-        <h6>Free</h6>
+        <h5>Доставка</h5>
+        <h6>Бесплатная</h6>
       </div>
-      <h6>Uzbekistan</h6>
+      <h6>Узбекистан</h6>
       <hr />
       <div className='basket-charge'>
-        <h5>Outcome:</h5>
-        <h6>{data.total} so`m</h6>
+        <h5>Итог:</h5>
+        <h6>{data.total} сум</h6>
       </div>
       <div className='dp-btn'>
-        <button className='btn btn-dark my-4'>Submit</button>
+        <button className='btn btn-dark my-4'>Оформить заказ</button>
       </div>
     </div>
   )

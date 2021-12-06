@@ -44,8 +44,8 @@ export const Products = () => {
     <div className='products'>
       <div className='products-top d-flex align-items-center'>
         <div className='products-top-inside'>
-          <h3>Products</h3>
-          <Link to='/products'>View all</Link>
+          <h3>Продукты</h3>
+          <Link to='/products'>Все товары</Link>
         </div>
       </div>
       <div className='products-content'>
@@ -77,7 +77,6 @@ export const Products = () => {
             </Slider>
           </div>
         </div>
-
       </div >
     </div >
   )

@@ -132,7 +132,7 @@ const ProductSlice = createSlice({
         img,
         cost,
         count: +count,
-        price: cost * +count,
+        price: cost * (+count),
         actionName
       })
     },
@@ -154,47 +154,46 @@ const ProductSlice = createSlice({
     },
 
     removeCount(state, action) {
-      let oldPrice = action.payload.cost 
       state.cardItem.map(item => {
         if (item.id === action.payload.id) {
-          item.count = action.payload.count 
-          item.price = item.price - oldPrice
+          item.count = item.count - 1
+          item.price = item.price - item.cost
         }
         return item
       })
     },
     addCount(state, action) {
-      let oldPrice = action.payload.cost
       state.cardItem.map(item => {
         if (item.id === action.payload.id) {
-          item.count = action.payload.count
-          item.price = oldPrice + action.payload.cost * action.payload.count
+          item.count = item.count + 1
+          item.price = item.cost * item.count
         }
         return item
       })
     },
+
     // products charge filter
     flaer(state, action) {
       state.cardItem.map(r => {
         if (r.id === action.payload.id) {
           switch (true) {
-            case action.payload.count <= 100:
+            case r.count <= 100:
               r.cost = 900
               break
-            case action.payload.count > 100 && action.payload.count <= 500:
+            case r.count > 100 && r.count <= 500:
               r.cost = 800
               break
-            case action.payload.count > 500 && action.payload.count <= 1000:
+            case r.count > 500 && r.count <= 1000:
               r.cost = 700
               break
-            case action.payload.count > 1000 && action.payload.count <= 5000:
+            case r.count > 1000 && r.count <= 5000:
               r.cost = 600
               break
             default:
               r.cost = 550
               break
           }
-          r.price = action.payload.count * r.cost
+          r.price = r.count * r.cost
         }
         return r
       })
@@ -203,23 +202,23 @@ const ProductSlice = createSlice({
       state.cardItem.map(r => {
         if (r.id === action.payload.id) {
           switch (true) {
-            case action.payload.count <= 100:
+            case r.count <= 100:
               r.cost = 3000
               break
-            case action.payload.count > 100 && action.payload.count <= 500:
+            case r.count > 100 && r.count <= 500:
               r.cost = 2500
               break
-            case action.payload.count > 500 && action.payload.count <= 1000:
+            case r.count > 500 && r.count <= 1000:
               r.cost = 2000
               break
-            case action.payload.count > 1000 && action.payload.count <= 5000:
+            case r.count > 1000 && r.count <= 5000:
               r.cost = 1800
               break
             default:
               r.cost = 1500
               break
           }
-          r.price = action.payload.count * r.cost
+          r.price = r.count * r.cost
         }
         return r
       })
@@ -228,26 +227,26 @@ const ProductSlice = createSlice({
       state.cardItem.map(r => {
         if (r.id === action.payload.id) {
           switch (true) {
-            case action.payload.count <= 50:
+            case r.count <= 50:
               r.cost = 30000
               break;
-            case action.payload.count > 50 && action.payload.count <= 100:
+            case r.count > 50 && r.count <= 100:
               r.cost = 25000
               break;
-            case action.payload.count > 100 && action.payload.count <= 250:
+            case r.count > 100 && r.count <= 250:
               r.cost = 18000
               break;
-            case action.payload.count > 250 && action.payload.count <= 500:
+            case r.count > 250 && r.count <= 500:
               r.cost = 15000
               break;
-            case action.payload.count > 500 && action.payload.count <= 1000:
+            case r.count > 500 && r.count <= 1000:
               r.cost = 12000
               break;
             default:
               r.cost = 10000
               break;
           }
-          r.price = r.cost * action.payload.count
+          r.price = r.cost * r.count
         }
         return r
       })
@@ -256,20 +255,20 @@ const ProductSlice = createSlice({
       state.cardItem.map(r => {
         if (r.id === action.payload.id) {
           switch (true) {
-            case action.payload.count <= 100:
+            case r.count <= 100:
               r.cost = 6000
               break;
-            case action.payload.count > 100 && action.payload.count <= 300:
+            case r.count > 100 && r.count <= 300:
               r.cost = 5000
               break;
-            case action.payload.count > 300 && action.payload.count <= 500:
+            case r.count > 300 && r.count <= 500:
               r.cost = 4000
               break;
             default:
               r.cost = 3000
               break;
           }
-          r.price = r.cost * action.payload.count
+          r.price = r.cost * r.count
         }
         return r
       })
@@ -278,17 +277,17 @@ const ProductSlice = createSlice({
       state.cardItem.map(r => {
         if (r.id === action.payload.id) {
           switch (true) {
-            case action.payload.count <= 5:
+            case r.count <= 5:
               r.cost = 50000
               break;
-            case action.payload.count > 5 && action.payload.count <= 10:
+            case r.count > 5 && r.count <= 10:
               r.cost = 40000
               break;
             default:
               r.cost = 35000
               break;
           }
-          r.price = r.cost * action.payload.count
+          r.price = r.cost * r.count
         }
         return r
       })
@@ -297,17 +296,17 @@ const ProductSlice = createSlice({
       state.cardItem.map(r => {
         if (r.id === action.payload.id) {
           switch (true) {
-            case action.payload.count <= 5:
+            case r.count <= 5:
               r.cost = 60000
               break;
-            case action.payload.count > 5 && action.payload.count <= 10:
+            case r.count > 5 && r.count <= 10:
               r.cost = 50000
               break;
             default:
               r.cost = 45000
               break;
           }
-          r.price = r.cost * action.payload.count
+          r.price = r.cost * r.count
         }
         return r
       })
@@ -325,11 +324,10 @@ const ProductSlice = createSlice({
             default:
               break;
           }
-          r.price = r.cost * action.payload.count
+          r.price = r.cost * r.count
         }
         return r
       })
-
     }
   }
 })

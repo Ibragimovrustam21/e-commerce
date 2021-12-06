@@ -18,23 +18,23 @@
 
       .product-item-quality {
         box-sizing: border-box;
-        padding: 15px;
+        padding: 10px;
 
         .price-block {
           display: flex;
           justify-content: space-between;
 
-          button {
+          span {
             position: absolute;
             top: 10px;
             right: 10px;
             height: 30px;
             width: 30px;
-            font-size: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
+            cursor: pointer;
           }
         }
       }
@@ -45,7 +45,7 @@
 
         img {
           height: 160px;
-          width: 180px;
+          width: 160px;
         }
 
         .product-item-info-in-card {
@@ -257,7 +257,7 @@
           padding: 20px;
 
           .price-block {
-            button {
+            span {
               top: 20px;
               right: 10px;
             }
